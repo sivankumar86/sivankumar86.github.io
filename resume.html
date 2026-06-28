@@ -1,0 +1,486 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Sivakumar Ramaswamy — CV</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Sivakumar Ramaswamy — Engineering Lead, Data Platforms. Condensed CV." />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+	<style>
+		:root {
+			--text: #0f172a;
+			--muted: #475569;
+			--soft: #64748b;
+			--rule: #e2e8f0;
+			--accent: #6366f1;
+			--accent-2: #ec4899;
+			--bg: #ffffff;
+		}
+
+		* { box-sizing: border-box; }
+
+		html, body {
+			margin: 0;
+			padding: 0;
+			color: var(--text);
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+			background: #f1f5f9;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		.toolbar {
+			position: sticky;
+			top: 0;
+			z-index: 10;
+			background: rgba(255, 255, 255, 0.92);
+			backdrop-filter: saturate(180%) blur(10px);
+			border-bottom: 1px solid var(--rule);
+			padding: 10px 16px;
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		.toolbar button,
+		.toolbar a {
+			font: inherit;
+			font-weight: 600;
+			font-size: 13px;
+			padding: 8px 14px;
+			border-radius: 8px;
+			border: 1px solid var(--rule);
+			background: #fff;
+			color: var(--text);
+			cursor: pointer;
+			text-decoration: none;
+			transition: transform 0.1s ease, box-shadow 0.15s ease;
+		}
+
+		.toolbar button.primary {
+			background: linear-gradient(90deg, var(--accent), var(--accent-2));
+			color: #fff;
+			border-color: transparent;
+		}
+
+		.toolbar button:hover,
+		.toolbar a:hover {
+			transform: translateY(-1px);
+			box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+		}
+
+		.page {
+			width: 210mm;
+			min-height: 297mm;
+			margin: 20px auto;
+			background: var(--bg);
+			padding: 14mm 16mm;
+			box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+			font-size: 10.2pt;
+			line-height: 1.42;
+			color: var(--text);
+			page-break-after: always;
+		}
+
+		.page:last-of-type { page-break-after: auto; }
+
+		/* Header */
+		.cv-header h1 {
+			margin: 0 0 2px;
+			font-size: 22pt;
+			font-weight: 800;
+			letter-spacing: -0.01em;
+			background: linear-gradient(90deg, var(--accent), var(--accent-2));
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.cv-header .title {
+			margin: 0 0 8px;
+			font-size: 11.5pt;
+			font-weight: 600;
+			color: var(--muted);
+		}
+
+		.cv-header .meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 6px 14px;
+			font-size: 9pt;
+			color: var(--soft);
+			margin-bottom: 4px;
+		}
+
+		.cv-header .meta a {
+			color: var(--accent);
+			text-decoration: none;
+		}
+
+		.cv-header .meta strong {
+			color: var(--text);
+			font-weight: 600;
+		}
+
+		.highlight-bar {
+			margin: 10px 0 14px;
+			padding: 8px 12px;
+			border-left: 3px solid var(--accent);
+			background: linear-gradient(90deg, rgba(99, 102, 241, 0.08), rgba(236, 72, 153, 0.04));
+			border-radius: 0 6px 6px 0;
+			font-size: 9.5pt;
+			color: var(--muted);
+		}
+
+		.highlight-bar strong { color: var(--text); }
+
+		/* Section */
+		h2 {
+			font-size: 10.5pt;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.08em;
+			margin: 14px 0 6px;
+			padding-bottom: 4px;
+			border-bottom: 1.5px solid var(--accent);
+			color: var(--text);
+		}
+
+		p { margin: 4px 0; }
+
+		.summary {
+			margin: 0 0 4px;
+			font-size: 10pt;
+			color: var(--muted);
+		}
+
+		/* Job */
+		.job {
+			margin: 8px 0 10px;
+		}
+
+		.job-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			gap: 8px;
+			margin-bottom: 2px;
+		}
+
+		.job-head h3 {
+			margin: 0;
+			font-size: 11pt;
+			font-weight: 700;
+		}
+
+		.job-head .when {
+			font-size: 9pt;
+			color: var(--soft);
+			font-weight: 600;
+			white-space: nowrap;
+		}
+
+		.company {
+			font-size: 9.5pt;
+			color: var(--muted);
+			font-weight: 500;
+			margin-bottom: 4px;
+		}
+
+		.company .country {
+			color: var(--accent);
+			font-weight: 600;
+		}
+
+		.job ul {
+			margin: 4px 0 0;
+			padding-left: 16px;
+		}
+
+		.job li {
+			margin-bottom: 2px;
+		}
+
+		/* Compact roles list */
+		.compact-roles {
+			list-style: none;
+			padding: 0;
+			margin: 4px 0 0;
+		}
+
+		.compact-roles li {
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+			padding: 4px 0;
+			border-bottom: 1px dashed var(--rule);
+		}
+
+		.compact-roles li:last-child { border-bottom: none; }
+
+		.compact-roles .role {
+			font-weight: 600;
+		}
+
+		.compact-roles .org {
+			color: var(--muted);
+		}
+
+		.compact-roles .when {
+			font-size: 9pt;
+			color: var(--soft);
+			white-space: nowrap;
+			font-weight: 600;
+		}
+
+		/* Skills */
+		.skills {
+			display: grid;
+			grid-template-columns: 160px 1fr;
+			gap: 4px 12px;
+			font-size: 9.5pt;
+		}
+
+		.skills dt {
+			font-weight: 700;
+			color: var(--text);
+		}
+
+		.skills dd {
+			margin: 0;
+			color: var(--muted);
+		}
+
+		/* Two-column block */
+		.two-col {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 14px;
+		}
+
+		.two-col ul {
+			margin: 4px 0 0;
+			padding-left: 16px;
+		}
+
+		.two-col li { margin-bottom: 2px; font-size: 9.5pt; }
+
+		/* Recognition */
+		.recognition {
+			margin: 6px 0 0;
+			padding: 8px 12px;
+			border-left: 3px solid var(--accent-2);
+			background: rgba(236, 72, 153, 0.04);
+			border-radius: 0 6px 6px 0;
+			font-size: 9.3pt;
+			color: var(--muted);
+			font-style: italic;
+		}
+
+		.recognition .who {
+			display: block;
+			margin-top: 4px;
+			font-style: normal;
+			font-weight: 600;
+			color: var(--text);
+			font-size: 8.8pt;
+		}
+
+		.footer-line {
+			margin-top: 10px;
+			padding-top: 8px;
+			border-top: 1px solid var(--rule);
+			font-size: 8.8pt;
+			color: var(--soft);
+			text-align: center;
+		}
+
+		/* Print rules */
+		@page {
+			size: A4;
+			margin: 0;
+		}
+
+		@media print {
+			html, body { background: #fff; }
+			.toolbar { display: none; }
+			.page {
+				margin: 0;
+				box-shadow: none;
+				width: 210mm;
+				min-height: 297mm;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="toolbar">
+		<button class="primary" onclick="window.print()">Save as PDF / Print</button>
+		<a href="index.html">← Back to full profile</a>
+	</div>
+
+	<!-- PAGE 1 -->
+	<section class="page">
+		<header class="cv-header">
+			<h1>Sivakumar Ramaswamy</h1>
+			<p class="title">Engineering Lead — Data Platforms</p>
+			<div class="meta">
+				<span><strong>Sydney, Australia</strong></span>
+				<span><strong>Australian Citizen</strong></span>
+				<span><a href="mailto:sivankumar86@gmail.com">sivankumar86@gmail.com</a></span>
+				<span><a href="https://www.linkedin.com/in/sivankumar86/">linkedin.com/in/sivankumar86</a></span>
+				<span><a href="https://github.com/sivankumar86">github.com/sivankumar86</a></span>
+			</div>
+			<div class="highlight-bar">
+				<strong>16+ years across four countries</strong> — Australia, USA, Mexico, India. Engineering leader specialising in cloud-native, governed data platforms at enterprise scale. Hybrid leadership and hands-on engineering across AWS, Snowflake, Databricks, and Kafka.
+			</div>
+		</header>
+
+		<h2>Summary</h2>
+		<p class="summary">Design and operate large-scale, governed data infrastructure across batch and streaming workloads. Stand up enterprise-grade ingestion, storage, orchestration, governance, and observability — and grow high-performance teams to own them end-to-end. Background spans distributed systems at AWS, big-data processing with Spark and Kafka, applied ML and GenAI in production, and security &amp; compliance modernisation (APRA CPS 234).</p>
+
+		<h2>Experience</h2>
+
+		<article class="job">
+			<div class="job-head">
+				<h3>Lead Engineer — Enterprise Data Platform</h3>
+				<span class="when">Present</span>
+			</div>
+			<div class="company">Commonwealth Bank of Australia (CBA) · <span class="country">Sydney, Australia</span></div>
+			<ul>
+				<li>Lead architecture and technical design of CBA's enterprise data platform (IDAP) — ingestion, transformation, orchestration, governance, observability, and CI/CD on AWS, Snowflake, dbt, Airflow, Terraform.</li>
+				<li>Own the platform roadmap with architects, product owners, security, and engineering leaders; define standards, reusable frameworks, and production readiness gates adopted across multiple business domains.</li>
+				<li>Designed and implemented enterprise data sharing on AWS DataZone and Snowflake — governed self-service access with strengthened metadata, lineage, access controls, and audit.</li>
+				<li>Delivered critical security and modernisation programs — APRA CPS 234 remediation, Airflow upgrades, container platform migration, certificate automation (retired 11 manual certs).</li>
+				<li>Drove platform adoption through tenant onboarding, golden paths, and developer enablement — reducing time-to-first-data-product for new teams.</li>
+				<li>Hands-on contributor across Python, Terraform, dbt, GitHub Actions, AWS — delivered 1,100+ production PRs and reusable platform components adopted across multiple teams.</li>
+			</ul>
+		</article>
+
+		<article class="job">
+			<div class="job-head">
+				<h3>Data &amp; AI Architect</h3>
+				<span class="when">2021 — Recent</span>
+			</div>
+			<div class="company">ZIP · <span class="country">Sydney, Australia</span></div>
+			<ul>
+				<li>Architected real-time event and analytics infrastructure on Snowplow, Kafka, and Amplitude — high-volume ingestion, schema management, and downstream activation across product surfaces.</li>
+				<li>Designed and operated data warehouses and lakes on AWS Redshift, S3, and DynamoDB; standardised batch and streaming ingestion patterns across teams.</li>
+				<li>Built ML deployment pipelines on Databricks Asset Bundles, Terraform, and GitLab; containerised models on EKS and Databricks Serverless with alerting and anomaly detection.</li>
+				<li>Shipped production GenAI features using OpenAI APIs and Bedrock Agents, including a knowledge-base REST API on Kubernetes.</li>
+				<li>Drove low-/no-code ingress &amp; egress with Fivetran, Airbyte, Census, Braze; integrated OpsGenie, Atlan, Jira for incident management and lineage.</li>
+			</ul>
+		</article>
+
+		<article class="job">
+			<div class="job-head">
+				<h3>Big Data Engineer</h3>
+				<span class="when">2016 — 2021</span>
+			</div>
+			<div class="company">Amazon Web Services (AWS) · <span class="country">Australia</span></div>
+			<ul>
+				<li>Built and operated distributed large-scale data processing solutions on Apache Spark for AWS customers.</li>
+				<li>Implemented search and deep-learning training/inference platforms using SageMaker and OpenSearch.</li>
+				<li>Partnered with customer data scientists to deploy and scale ML models in production — focus on reliability and cost.</li>
+				<li>Drove customer code reviews and engineering excellence across Java, Python, and Kotlin services.</li>
+			</ul>
+		</article>
+	</section>
+
+	<!-- PAGE 2 -->
+	<section class="page">
+
+		<h2>Earlier Experience</h2>
+		<ul class="compact-roles">
+			<li>
+				<span><span class="role">Startup Technical Consultant</span> · <span class="org">AI Hello — <span style="color: var(--accent); font-weight: 600;">USA</span></span></span>
+				<span class="when">2015</span>
+			</li>
+			<li>
+				<span><span class="role">Senior Java Consultant</span> · <span class="org">Northern Trust — <span style="color: var(--accent); font-weight: 600;">USA</span></span></span>
+				<span class="when">2014 — 2016</span>
+			</li>
+			<li>
+				<span><span class="role">Big Data Developer</span> · <span class="org">Dictionary.com — <span style="color: var(--accent); font-weight: 600;">Mexico</span></span></span>
+				<span class="when">2013 — 2014</span>
+			</li>
+			<li>
+				<span><span class="role">Software Developer</span> · <span class="org">Ask.com — <span style="color: var(--accent); font-weight: 600;">India</span></span></span>
+				<span class="when">2009 — 2013</span>
+			</li>
+		</ul>
+
+		<h2>Core Skills</h2>
+		<dl class="skills">
+			<dt>Languages</dt>
+			<dd>Python, Java, Scala, Go, SQL, dbt</dd>
+
+			<dt>Cloud &amp; Platforms</dt>
+			<dd>AWS, Snowflake, Databricks, Kubernetes, EKS</dd>
+
+			<dt>Streaming &amp; Batch</dt>
+			<dd>Kafka, Schema Registry, Snowplow, Kinesis · Apache Spark, AWS Glue, EMR</dd>
+
+			<dt>Storage &amp; Tables</dt>
+			<dd>S3, Snowflake, Redshift, Delta Lake, Iceberg, DynamoDB, RDS</dd>
+
+			<dt>Orchestration &amp; CI/CD</dt>
+			<dd>Airflow, GitHub Actions, GitLab, Terraform, CloudFormation, Databricks Asset Bundles</dd>
+
+			<dt>Governance &amp; Security</dt>
+			<dd>AWS DataZone, Atlan, Access control &amp; audit, IAM &amp; encryption, APRA CPS 234</dd>
+
+			<dt>ML &amp; GenAI</dt>
+			<dd>SageMaker, Bedrock Agents, OpenAI APIs, Databricks ML</dd>
+
+			<dt>Observability</dt>
+			<dd>Elementary, Soda, Dynatrace, OpenSearch</dd>
+
+			<dt>Leadership</dt>
+			<dd>Roadmap ownership · Hiring &amp; team building · Design reviews · Mentoring · Stakeholder partnership</dd>
+		</dl>
+
+		<div class="two-col">
+			<div>
+				<h2>Certifications</h2>
+				<ul>
+					<li>AWS Cloud — 5+ certifications</li>
+					<li>Databricks — Apache Spark Developer</li>
+					<li>Databricks — Generative AI</li>
+					<li>Oracle Certified Java Programmer (1.7+)</li>
+					<li>AppSec Champions Academy (16-hr, defensive coding)</li>
+				</ul>
+			</div>
+			<div>
+				<h2>Education</h2>
+				<ul>
+					<li><strong>Diploma — Data Science</strong><br/>MIT, Melbourne, Australia</li>
+					<li><strong>Bachelor's Degree — Computer Science</strong></li>
+				</ul>
+
+				<h2>Achievements</h2>
+				<ul>
+					<li>Deployed and scaled multiple ML models on Databricks &amp; Spark</li>
+					<li>Reduced defects by 30% via CI/CD pipelines</li>
+					<li>Mentored juniors — lifted team productivity by 25%</li>
+				</ul>
+			</div>
+		</div>
+
+		<h2>Recognition</h2>
+		<div class="recognition">
+			"You have brought with you a wealth of technical expertise and have gone over and above in delivery speed. You have helped us get a long way in adopting dbt and analytics-platform thinking. You have shown yourself to be an engineering leader within our squad, regularly guiding junior members and pushing them to grow."
+			<span class="who">— Clement Wang, COE · CBA</span>
+		</div>
+		<div class="recognition">
+			"Siva displayed expertise and an ability to communicate complex ideas and build alignment amongst leaders. When you spoke, people listened. You're a valued asset to IB&amp;M Technology and CBA."
+			<span class="who">— Alistair MacArthur, Crew Lead · CBA</span>
+		</div>
+
+		<div class="footer-line">
+			Sivakumar Ramaswamy · Sydney, Australia · Australian Citizen · <a href="mailto:sivankumar86@gmail.com" style="color: var(--accent);">sivankumar86@gmail.com</a>
+		</div>
+	</section>
+
+</body>
+</html>
